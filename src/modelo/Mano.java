@@ -18,12 +18,8 @@ public class Mano extends Mazo {
 	}
 
 	/**
-	 * Debes obtener el valor de toda la mano
-	 * del jugador, para ello, se recorre la
-	 * lista con un FOR para obtener el valor
-	 * de cada carte y finalmente retornar el
-	 * valor total.
-	 * @return valor total de la baraja.
+	 * Calcula el valor total de la Mano
+	 * @return Devuelve el valor total de la Mano.
 	 */
 	public int valorMano() {
 		int valor=0;
@@ -35,11 +31,8 @@ public class Mano extends Mazo {
 
 	/**
 	 * Determina si es el fin del juego.
-	 * Si el valor de la mano del jugador es
-	 * superior o igual a 21, el juego termina
-	 * si no, el juego aún no ha acabado.
 	 * @return valor verdadero o falso de si
-	 * es el fin del juego para el jugador o no
+	 * es el fin del juego para el jugador o no.
 	 */
 	public boolean finDeJuego() {
 		if (this.valorMano()>=21) {
@@ -50,7 +43,7 @@ public class Mano extends Mazo {
 
 	/**
 	 * Mostrar toda la información de la carta
-	 * @return Devuelve en formato texto de como queremos
+	 * @return Devuelve en formato texto del conjunto de cartas y el valor de la mano.
 	 */
 	@Override
 	public String toString() {
