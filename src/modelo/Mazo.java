@@ -10,7 +10,10 @@ import excepciones.NoHayMasCartasException;
 public class Mazo {
 
 	protected List<Carta> cartas;
-	
+
+	/**
+	 * Constructor del Mazo.
+	 */
 	public Mazo() {
 		this.cartas = new ArrayList<Carta>();	
 		for(Palo palo: Palo.values()) {
@@ -20,8 +23,10 @@ public class Mazo {
 			}
 		}
 	}
-	
-	
+
+	/**
+	 * Baraja el mazo de cartas
+	 */
 	public void barajar() {
 		Collections.shuffle(cartas);
 	}
@@ -35,7 +40,12 @@ public class Mazo {
 		}
 		return res;
 	}
-	
+
+	/**
+	 * Le otorga una carta a la mano del jugador.
+	 * @return Devuelve una carta.
+	 * @throws NoHayMasCartasException Excepción avisando que no hay más cartas en el mazo.
+	 */
 	public Carta solicitarCarta() throws NoHayMasCartasException {
 		if (this.cartas.isEmpty()) {
 			throw new NoHayMasCartasException();
