@@ -7,6 +7,7 @@ import excepciones.NoHayMasCartasException;
 /**
  * @author rodriguez.pedan
  * @version 1
+ * @see modelo.Mazo
  */
 public class Mano extends Mazo {
 
